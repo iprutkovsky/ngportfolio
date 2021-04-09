@@ -1,0 +1,33 @@
+<body>
+  <nav class="navbar">
+    <div class="max-width">
+      <div class="logo"><a><b><span class="typing"></span></b></a>
+      </div>
+      <ul class="menu">
+        <li>
+          <a [routerLink]="['/summary']" class="menu-btn">Summary</a>
+        </li>
+        <li>
+          <a [routerLink]="['/experience']" class="menu-btn">Experience</a>
+        </li>
+        <li>
+          <a [routerLink]="['/education']" class="menu-btn">Education</a>
+        </li>
+        <li>
+          <a [routerLink]="['/skills']" class="menu-btn">Skills</a>
+        </li>
+        <li>
+          <a [routerLink]="['/projects']" class="menu-btn">Projects</a>
+        </li>
+        <li>
+          <a [routerLink]="['/contact']" class="menu-btn">Contact</a>
+        </li>
+      </ul>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+</body>

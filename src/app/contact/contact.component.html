@@ -1,0 +1,60 @@
+<section class="contact" id="contact">
+    <div class="max-width">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                <h2 class="container-heading animate-box">Contact</h2>
+            </div>
+        </div>
+        <div class="contact-content">
+            <div class="column left">
+                <div class="row">
+                    <i class="fas fa-user"></i>
+                    <div class="info">
+                        <div class="head">Name</div>
+                        <div class="sub-title"><b>Ilia Prutkovsky</b></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <i class="fas fa-envelope"></i>
+                    <div class="info">
+                        <div class="head">Email</div>
+                        <div class="sub-title"><b>iprutkovsky@gmail.com</b></div>
+                    </div>
+                </div>
+                <div class="social_media">
+                    <div class="row">
+                        <a href="https://www.facebook.com/ilia.prutkovsky" target="_blank"
+                            rel="noopener noreferrer"><img src="./assets/images/facebook_i_s.png"></a>
+                        <a href="https://www.linkedin.com/in/ilia-prutkovsky-60837b41/" target="_blank"
+                            rel="noopener noreferrer"><img src="./assets/images/linkedin_i_s.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="text">Message</div>
+                <form class="contact-form" method="POST" [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="fields">
+                        <div class="field name">
+                            <input type="text" class="fullname" placeholder="Name" [formControl]="name" required>
+                        </div>
+                        <div class="field email">
+                            <input type="text" class="email-input" placeholder="Email" [formControl]="email" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <input type="text" class="subject" placeholder="Subject" [formControl]="subject" required>
+                    </div>
+                    <div class="field_textarea">
+                        <textarea class="message" cols="30" rows="10" placeholder="Message..." [formControl]="message"
+                            maxlength="256" required></textarea>
+                    </div>
+                    <div class="button-area">
+                        <button class="send-msg" type="submit" [disabled]="isLoading">Send</button>
+                        <span style="min-height: 15px;">{{responseMessage}}</span>
+                        <input [formControl]="honeypot" class="send-msg-spam" type="text" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
