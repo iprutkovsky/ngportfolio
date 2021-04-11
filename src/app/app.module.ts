@@ -11,7 +11,6 @@ import { EducationComponent } from './education/education.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
-import { ContactService } from './contact.service';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
 
 @NgModule({
@@ -32,7 +31,6 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
     NgxScrollTopModule
   ],
   providers: [
-    ContactService
   ],
   bootstrap: [AppComponent]
 })
