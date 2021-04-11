@@ -35,7 +35,6 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/jquery/dist/jquery.waypoints.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "src/assets/js/typed.min.js",
               "src/assets/js/anime.min.js",
