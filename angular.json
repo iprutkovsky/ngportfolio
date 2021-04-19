@@ -31,18 +31,18 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.sass"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/js/typed.min.js",
               "src/assets/js/anime.min.js",
-              "src/assets/js/animation.effects.js",
-              "src/assets/js/contentWayPoint.js",
-              "src/assets/js/text_typing.js",
               "src/assets/js/modernizr-2.6.2.min.js",
-              "src/assets/js/owl.carousel.min.js"
+              "src/assets/js/typed.min.js",
+              "src/assets/js/text_typing.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/contentWayPoint.js"
             ]
           },
           "configurations": {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 declare var $: any;
 
 @Component({
@@ -8,9 +9,11 @@ declare var $: any;
 })
 export class ExperienceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appComponent: AppComponent) {
+    appComponent.comp = false;
+  }
 
-  ngOnInit(): void { }
+  ngOnInit() { }
 
   ngAfterViewInit() {
     $.getScript('../assets/js/contentWayPoint.js');

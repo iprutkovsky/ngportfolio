@@ -38,7 +38,7 @@ $dfl_color: #79a1c2
     padding: 0 15px
     font-size: 17px
     @include dfl_font()
-    transition: all 0.3s ease
+    transition: all .5s ease
 
 @mixin btn()
     @include w_color()
@@ -54,7 +54,7 @@ $dfl_color: #79a1c2
     flex-wrap: nowrap
     @include bgrnd()
     @include brd()
-    transition: all 0.3s ease
+    transition: all .5s ease
 
 @mixin btn_cover()
     color: $dfl_color
@@ -83,6 +83,40 @@ body
     line-height: 1.8
     background: url("./assets/images/spiral_staircase.png") fixed no-repeat
     overflow: none
+
+.slogan
+    position: fixed
+    left: 18%
+    top: 38%
+    width: 60%
+    @include g_ctr()
+    font-size: 2em
+.fp
+    border: none !important
+    margin-left: 300px
+    margin-right: 500px
+    border-radius: 6px
+    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5), inset 0 0 15px rgba(0, 0, 0, .2)
+    p
+        color: #3b3b3b
+        text-shadow: 0 0 2px #6dd1ff, 0 0 4px #353535, 0 0 5px #3e3e3e
+.sp
+    border: none !important
+    margin-left: 430px
+    margin-right: 470px
+    border-radius: 6px
+    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5), inset 0 0 15px rgba(0, 0, 0, .2)
+    p
+        color: #3b3b3b
+        text-shadow: 0 0 2px #6dd1ff, 0 0 4px #353535, 0 0 5px #3e3e3e
+.tp
+    margin-left: 560px
+    margin-right: 240px
+    border-radius: 6px
+    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5), inset 0 0 15px rgba(0, 0, 0, .2)
+    p
+        color: #3b3b3b
+        text-shadow: 0 0 2px #6dd1ff, 0 0 4px #353535, 0 0 5px #3e3e3e
 
 /* custom scroll bar */
 
@@ -144,7 +178,7 @@ footer
     padding: 30px 0
     @include dfl_font()
     @include bgrnd()
-    transition: all 0.3s ease
+    transition: all .5s ease
     .max-width
         display: flex
         @include a_ctr()
@@ -168,7 +202,7 @@ footer
                     font-size: 18px
                     font-weight: 500
                     margin-left: 25px
-                    transition: color 0.3s ease
+                    transition: color .5s ease
                     &:hover
                         color: #000
 
@@ -184,7 +218,7 @@ footer
     position: relative
     padding-top: 6px
     font-size: 32px
-    transition: all 0.3s ease
+    transition: all .5s ease
     &:hover
         filter: brightness(90%)
 
@@ -213,7 +247,7 @@ footer
         margin-top: 20px
         border-radius: 6px
         @mixin brd()
-            transition: all 0.3s ease
+            transition: all .5s ease
         &:hover
             @include btn_cover()
 
@@ -293,60 +327,10 @@ footer
 
 .toggle
     position: absolute
-    margin: 4% 0 2% 2%
+    // top: 16%
+    // left: 22%
+    margin: 10.4% 0 0 20.5%
     transform: translate(-50%, -50%)
-
-input[type="checkbox"]
-    outline: 0 !important
-    content: ''
-    position: relative
-    width: 45px
-    height: 15px
-    appearance: none
-    -webkit-appearance: none
-    -moz-appearance: none
-    -ms-appearance: none
-    -o-appearance: none
-    background: linear-gradient(0deg, #333, #000)
-    border-radius: 10px
-    box-shadow: 0 0 0 4px #353535
-    transition: .5s
-
-input:checked[type="checkbox"]
-    background: linear-gradient(0deg, #6dd1ff, #20b7ff)
-    box-shadow: 0 0 2px #6dd1ff, 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5), inset 0 0 15px rgba(0, 0, 0, .2)
-
-input[type="checkbox"]:before
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    width: 25px
-    height: 15px
-    background: linear-gradient(0deg, #000, #6b6b6b)
-    border-radius: 10px
-    box-shadow: 0 0 0 1px #232323
-    transform: scale(.98, .96)
-    transition: .5s
-
-input:checked[type="checkbox"]:before
-    left: 20px
-
-input[type="checkbox"]:after
-    content: ''
-    position: absolute
-    top: calc(50% - 2px)
-    left: 18px
-    width: 4px
-    height: 4px
-    background: linear-gradient(0deg, #6b6b6b, #000)
-    border-radius: 2px
-    transition: .5s
-
-input:checked[type="checkbox"]:after
-    background: #63cdff
-    left: 37px
-    box-shadow: 0 0 2px #13b3ff, 0 0 6px #13b3ff
 
 // input[type="checkbox"]
 //     outline: 0 !important
@@ -363,42 +347,119 @@ input:checked[type="checkbox"]:after
 //     border-radius: 10px
 //     box-shadow: 0 0 0 4px #353535
 //     transition: .5s
-//     &:checked[type="checkbox"]
-//         background: linear-gradient(0deg, #6dd1ff, #20b7ff)
-//         box-shadow: 0 0 2px #6dd1ff, 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5), inset 0 0 15px rgba(0, 0, 0, .2)
-//     &:before
-//         content: ''
-//         position: absolute
-//         top: 0
-//         left: 0
-//         width: 25px
-//         height: 15px
-//         background: linear-gradient(0deg, #000, #6b6b6b)
-//         border-radius: 10px
-//         box-shadow: 0 0 0 1px #232323
-//         transform: scale(.98, .96)
-//         transition: .5s
-//     &:after
-//         content: ''
-//         position: absolute
-//         top: calc(50% - 2px)
-//         left: 18px
-//         width: 4px
-//         height: 4px
-//         background: linear-gradient(0deg, #6b6b6b, #000)
-//         border-radius: 2px
-//         transition: .5s
 
 // input:checked[type="checkbox"]
-//     &:before
-//         left: 20px
-//     &:after
-//         background: #63cdff
-//         left: 37px
-//         box-shadow: 0 0 2px #13b3ff, 0 0 6px #13b3ff
+//     background: linear-gradient(0deg, #6dd1ff, #20b7ff)
+//     box-shadow: 0 0 2px #6dd1ff, 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5), inset 0 0 15px rgba(0, 0, 0, .2)
 
-/* -=toggle=- */
+// input[type="checkbox"]:before
+//     content: ''
+//     position: absolute
+//     top: 0
+//     left: 0
+//     width: 25px
+//     height: 15px
+//     background: linear-gradient(0deg, #000, #6b6b6b)
+//     border-radius: 10px
+//     box-shadow: 0 0 0 1px #232323
+//     transform: scale(.98, .96)
+//     transition: .5s
 
+// input:checked[type="checkbox"]:before
+//     left: 20px
+
+// input[type="checkbox"]:after
+//     content: ''
+//     position: absolute
+//     top: calc(50% - 2px)
+//     left: 18px
+//     width: 4px
+//     height: 4px
+//     background: linear-gradient(0deg, #6b6b6b, #000)
+//     border-radius: 2px
+//     transition: .5s
+
+// input:checked[type="checkbox"]:after
+//     background: #63cdff
+//     left: 37px
+//     box-shadow: 0 0 2px #13b3ff, 0 0 6px #13b3ff
+
+.tglBtn
+    content: ''
+    position: relative
+    width: 31px
+    height: 31px
+    background: linear-gradient(0deg, #333, #4b4b4b)
+    border-radius: 6px
+    box-shadow: 0 0 0 4px #353535
+    transition: .5s
+
+.tglBtn:before
+    content: ''
+    position: absolute
+    top: 3px
+    left: 3px
+    width: 25px
+    height: 25px
+    background: linear-gradient(0deg, #000, #6b6b6b)
+    border-radius: 6px
+    box-shadow: 0 0 0 1px #232323
+    transition: .5s
+
+.tglBtn:after
+    content: ''
+    position: absolute
+    top: 6px
+    left: 17px
+    width: 5px
+    height: 5px
+    background: linear-gradient(0deg, #000, #6b6b6b)
+    border-radius: 3px
+    transition: .5s
+
+.tglBtn-checked
+    outline: 0 !important
+    content: ''
+    position: relative
+    width: 31px
+    height: 31px
+    appearance: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    -ms-appearance: none
+    -o-appearance: none
+    background: linear-gradient(0deg, #333, #4b4b4b)
+    border-radius: 6px
+    box-shadow: 0 0 2px #6dd1ff, 0 0 0 4px #8ad9fd, 0 0 0 5px #a0e1ff
+    transition: .5s
+
+.tglBtn-checked:before
+    content: ''
+    position: absolute
+    top: 3px
+    left: 3px
+    width: 25px
+    height: 25px
+    background: linear-gradient(0deg, #000, #6b6b6b)
+    border-radius: 6px
+    box-shadow: 0 0 2px #13b3ff, 0 0 6px #13b3ff
+    transition: .5s
+
+.tglBtn-checked:after
+    content: ''
+    position: absolute
+    top: 6px
+    left: 17px
+    width: 5px
+    height: 5px
+    background: #63cdff
+    border-radius: 3px
+    box-shadow: 0 0 2px #13b3ff, 0 0 6px #13b3ff
+    transition: .5s
+
+/* toggle */
+
+/* skills */
 .skills-field
     margin-left: 7%
 
@@ -414,61 +475,68 @@ input:checked[type="checkbox"]:after
     bottom: 25%
     border-radius: 6px
     @mixin brd()
-        transition: all 0.3s ease
+        transition: all .5s ease
     &:hover
         @include btn_cover()
     .wrapper
         position: relative
 
-.skills-wrap h3
-    font-size: 20px
-    @include dfl_font()
+.skills-wrap
+    @include g_ctr()
+    height: 45px
+    border-radius: 6px
     margin-bottom: 3%
-    text-decoration: none
-    position: relative
-    -webkit-transition: 0.3s
-    -o-transition: 0.3s
-    transition: 0.3s
-
-    &:after
-        content: ""
-        position: absolute
-        height: 100%
-        width: 80%
-        left: 0
-        right: 0
-        border: .5px dashed #79a1c2
-        border-radius: 2px
-        background-color: #79a1c2
-        opacity: .4
-        visibility: hidden
-        -webkit-transform: scaleX(0)
-        -moz-transform: scaleX(0)
-        -ms-transform: scaleX(0)
-        -o-transform: scaleX(0)
-        transform: scaleX(0)
-        -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-        -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-        -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-        -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-
-    &:hover:after
-        visibility: visible
-        -webkit-transform: scaleX(1)
-        -moz-transform: scaleX(1)
-        -ms-transform: scaleX(1)
-        -o-transform: scaleX(1)
-        transform: scaleX(1)
+    box-shadow: 0 0 2px #2e2e2e, 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5), inset 0 0 15px rgba(0, 0, 0, .2)
+    // box-shadow: none
+    h3
+        height: 45px
+        font-size: 24px
+        @include dfl_font()
+        padding-top: 6px
+        // margin-bottom: 3%
+        text-decoration: none
+        position: relative
+        border-radius: 6px
+        box-shadow: 0 0 2px #6dd1ff, 0 0 0 4px #353535, 0 0 0 5px #3e3e3e
+        -webkit-transition: .5s
+        -o-transition: .5s
+        transition: .5s
+        &:after
+            content: ""
+            position: absolute
+            height: 70%
+            width: 100%
+            left: 0
+            right: 0
+            border-radius: 6px
+            background-color: #79a1c2
+            opacity: .4
+            visibility: hidden
+            -webkit-transform: scaleX(0)
+            -moz-transform: scaleX(0)
+            -ms-transform: scaleX(0)
+            -o-transform: scaleX(0)
+            transform: scaleX(0)
+            -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+            -moz-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+            -ms-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+            -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+            transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+        &:hover:after
+            visibility: visible
+            -webkit-transform: scaleX(1)
+            -moz-transform: scaleX(1)
+            -ms-transform: scaleX(1)
+            -o-transform: scaleX(1)
+            transform: scaleX(1)
 
 .container
     position: absolute
-    top: 0
-    left: 0
+    top: 35%
+    left: 20%
     @include wdt()
     height: 243px
     display: block
-    /* border: #000 solid; */
     z-index: 99
 
 .blk
@@ -480,7 +548,6 @@ input:checked[type="checkbox"]:after
     left: 45%
     justify-content: center
     @include a_ctr()
-    /* background: url(../images/block_s.png); */
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2)
 
 /* projects section styling */
@@ -492,7 +559,7 @@ input:checked[type="checkbox"]:after
     padding: 25px 35px
     text-align: center
     overflow: hidden
-    transition: all 0.3s ease
+    transition: all .5s ease
     &:hover
         color: $dfl_color
         .box
@@ -504,13 +571,13 @@ input:checked[type="checkbox"]:after
         flex-direction: column
         align-items: center
         justify-content: center
-        transition: all 0.3s ease
+        transition: all .5s ease
     img
         height: 200px
         width: 350px
         object-fit: cover
         border-radius: 5px
-        transition: all 0.3s ease
+        transition: all .5s ease
 
 .owl-dots
     text-align: center
@@ -523,7 +590,7 @@ input:checked[type="checkbox"]:after
     outline: none!important
     border-radius: 50%
     border: 2px solid $dfl_color!important
-    transition: all 0.3s ease
+    transition: all .5s ease
 
 .owl-dot.active
     width: 35px
@@ -579,7 +646,7 @@ input:checked[type="checkbox"]:after
                     &:focus
                         // color: #b3b3b3
                         box-shadow: none
-                        transition: all 0.3s ease
+                        transition: all .5s ease
             .button-area
                 display: flex
                 margin-top: 10px
@@ -597,7 +664,7 @@ input:checked[type="checkbox"]:after
                     box-shadow: 0 0 2px #6dd1ff, 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5), inset 0 0 15px rgba(0, 0, 0, .2)
                     &:focus
                         box-shadow: none
-                        transition: all 0.3s ease
+                        transition: all .5s ease
 
 .send-msg-spam
     display: none

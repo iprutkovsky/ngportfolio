@@ -1,7 +1,7 @@
 <body>
   <nav class="navbar">
     <div class="max-width">
-      <div class="logo"><a><b><span class="typing"></span></b></a>
+      <div class="logo"><a [routerLink]="['/']"><b><span class="typing"></span></b></a>
       </div>
       <ul class="menu">
         <li>
@@ -23,11 +23,21 @@
           <a [routerLink]="['/contact']" class="menu-btn">Contact</a>
         </li>
       </ul>
-      <div class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </div>
     </div>
   </nav>
 
   <router-outlet></router-outlet>
+
+  <div class="slogan" *ngIf="comp">
+    <div class="fp">
+      <p>To be good at theor<b>y</b></p>
+    </div>
+    <div class="sp">
+      <p>doesn't m<b>e</b>an </p>
+    </div>
+    <div class="tp">
+      <p><b>T</b>o be good at coding</p>
+    </div>
+  </div>
+
 </body>

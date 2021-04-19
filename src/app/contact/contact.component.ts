@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 declare var $: any;
@@ -20,7 +21,8 @@ export class ContactComponent implements OnInit {
   isLoading: boolean = false; // disable the submit button if we're loading
   responseMessage?: string; // the response message to show to the user
 
-  constructor(private formBuilder: FormBuilder, private httpClient: HttpClient) {
+  constructor(private appComponent: AppComponent, private formBuilder: FormBuilder, private httpClient: HttpClient) {
+    appComponent.comp = false;
     this.form = this.formBuilder.group({
       name: this.name,
       email: this.email,

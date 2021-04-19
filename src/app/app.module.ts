@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -12,6 +13,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -21,16 +24,20 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
     EducationComponent,
     SkillsComponent,
     ProjectsComponent,
-    ContactComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxScrollTopModule
+    NgxScrollTopModule,
+    MatButtonModule,
+    MatButtonToggleModule
   ],
   providers: [
+    AppComponent
   ],
   bootstrap: [AppComponent]
 })
