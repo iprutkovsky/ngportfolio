@@ -50,7 +50,7 @@
                     </div>
                     <div class="button-area">
                         <button class="send-msg" type="submit" [disabled]="isLoading">Send</button>
-                        <span style="min-height: 15px;">{{responseMessage}}</span>
+                        <span class="resp-msg">{{responseMessage}}</span>
                         <input [formControl]="honeypot" class="send-msg-spam" type="text" />
                     </div>
                 </form>
