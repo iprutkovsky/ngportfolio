@@ -46,7 +46,7 @@ export class SkillsComponent implements OnInit {
         let arr = ['Java', 'JDBC', 'Servlets', 'Spring', 'Microservices', 'SQL', 'MYSQL', 'OracleSQL',
           'Angular 8', 'Angular 9', 'Angular 11', 'TypeScript', 'Angular JS', 'HTML5', 'CSS3', 'SASS',
           'Javascript', 'RxJS', 'JQuery', 'Node.js', 'Express.js', 'Jenkins', 'GitHub',
-          'GitLab', 'AWS', 'S3', 'GC', 'Wordpress', 'Jasmine'];
+          'GitLab', 'AWS', 'S3', 'GC', 'Wordpress', 'Jasmine', 'Jest', 'JUnit'];
         setTimeout(function () {
           let container: any = document.querySelector('.container');
           container.innerHTML = '';
