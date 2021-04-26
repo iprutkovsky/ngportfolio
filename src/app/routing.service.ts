@@ -5,6 +5,15 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class RoutingService {
+  private _btnStatus: boolean = false;
+
+  get btnStatus(): boolean {
+    return this._btnStatus;
+  }
+
+  set btnStatus(toggleBtn: boolean) {
+    this._btnStatus = toggleBtn;
+  }
 
   constructor() { }
 

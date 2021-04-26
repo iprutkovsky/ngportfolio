@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
+import { RoutingService } from '../routing.service';
 declare var $: any;
 declare const anime: any;
 
@@ -9,15 +10,16 @@ declare const anime: any;
   styleUrls: ['./skills.component.sass']
 })
 export class SkillsComponent implements OnInit {
-  toggleBtn: any;
+  toggleBtn: boolean = false;
 
-  constructor(private appComponent: AppComponent) {
+  constructor(private appComponent: AppComponent, private routingService: RoutingService) {
     appComponent.comp = false;
   }
 
   ngOnInit(): void { }
 
   onChecked() {
+    // this.routingService.btnStatus = !this.routingService.btnStatus;
     this.toggleBtn = !this.toggleBtn;
     let toggle = () => {
       let sf = $('.skills-field'),
@@ -42,9 +44,9 @@ export class SkillsComponent implements OnInit {
       $(document).ready(function () {
         let s = 1000;
         let arr = ['Java', 'JDBC', 'Servlets', 'Spring', 'Microservices', 'SQL', 'MYSQL', 'OracleSQL',
-          'Angular 8', 'Angular 9', 'Angular 11', 'TypeScript', 'Angular JS', 'HTML5', 'CSS3',
+          'Angular 8', 'Angular 9', 'Angular 11', 'TypeScript', 'Angular JS', 'HTML5', 'CSS3', 'SASS',
           'Javascript', 'RxJS', 'JQuery', 'Node.js', 'Express.js', 'Jenkins', 'GitHub',
-          'GitLab', 'AWS', 'S3', 'GC', 'Wordpress'];
+          'GitLab', 'AWS', 'S3', 'GC', 'Wordpress', 'Jasmine'];
         setTimeout(function () {
           let container: any = document.querySelector('.container');
           container.innerHTML = '';
@@ -72,4 +74,32 @@ export class SkillsComponent implements OnInit {
 
     toggle();
   }
+
+  // toggleSaveStatus = (status: boolean) => {
+  //   let toggleStatus = {      
+  //     on: true,
+  //     off: false
+  //   }
+  //   return (action: any) => {
+  //     switch (action.type) {
+  //       case 'on':
+  //         const previous = history.past[0]
+  //         const newPast = history.past.slice(1)
+  //         history = {
+  //           past: newPast,
+  //           present: previous,
+  //           future: [history.present, ...history.future]
+  //         }
+  //         return previous        
+  //       default:
+  //         const newPresent = status(state, action)
+  //         history = {
+  //           past: [history.present, ...history.past],
+  //           present: newPresent,
+  //           future: [] 
+  //         }
+  //         return newPresent
+  //     }
+  //   }
+  // }
 }
