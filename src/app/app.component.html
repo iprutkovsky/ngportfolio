@@ -28,6 +28,14 @@
 
   <router-outlet></router-outlet>
 
+  <!-- loading -->
+  <div class="loader" *ngIf="loading">
+    <div class="outer"></div>
+    <div class="inner">
+      <span>{{counter}}</span>
+    </div>
+  </div>
+
   <div class="slogan" *ngIf="comp">
     <div class="fp">
       <p>To be good at theor<b>y</b></p>

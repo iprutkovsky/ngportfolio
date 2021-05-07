@@ -11,6 +11,7 @@ export class ExperienceComponent implements OnInit {
 
   constructor(private appComponent: AppComponent) {
     appComponent.comp = false;
+    appComponent.loading = false;
   }
 
   ngOnInit() { }

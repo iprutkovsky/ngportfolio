@@ -23,6 +23,7 @@ export class ContactComponent implements OnInit {
 
   constructor(private appComponent: AppComponent, private formBuilder: FormBuilder, private httpClient: HttpClient) {
     appComponent.comp = false;
+    appComponent.loading = false;
     this.form = this.formBuilder.group({
       name: this.name,
       email: this.email,

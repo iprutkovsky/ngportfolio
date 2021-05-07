@@ -84,9 +84,47 @@ body
     background: url("./assets/images/spiral_staircase.png") fixed no-repeat
     overflow: none
 
+.loader
+    position: fixed
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: sans-serif
+    top: 40%
+    left: 47%
+
+.outer
+    height: 145px
+    width: 145px
+    border: 6px solid rgba(255,255,255,.2)
+    border-radius: 50%
+    border-top-color: #fff
+    animation: spin 2s linear infinite
+
+@keyframes spin
+    100%
+        transform: rotate(360deg)
+
+.inner
+    position: absolute
+    width: 125px
+    height: 125px
+    text-align: center
+    line-height: 125px
+    background: $dfl_color
+    border-radius: 50%
+    cursor: default
+    & span
+        font-size: 30px
+        font-weight: 800
+        background: #fff
+        color: transparent
+        -webkit-background-clip: text
+        background-size: 300%
+
 .slogan
     position: fixed
-    left: 18%
+    left: 20%
     top: 38%
     width: 60%
     @include g_ctr()
@@ -158,6 +196,10 @@ footer
     flex-wrap: wrap
     @include a_ctr()
     justify-content: space-between
+
+// .experience
+//     position: absolute
+//     overflow-y: scroll
 
 .container-heading
     font-size: 18px

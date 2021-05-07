@@ -14,6 +14,7 @@ export class SkillsComponent implements OnInit {
 
   constructor(private appComponent: AppComponent, private routingService: RoutingService) {
     appComponent.comp = false;
+    appComponent.loading = false;
   }
 
   ngOnInit(): void { }
