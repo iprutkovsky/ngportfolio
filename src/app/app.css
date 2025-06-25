@@ -1,0 +1,57 @@
+button {
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hexagon-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hexagon */
+.hexagon-item-ex:nth-child(even) {
+  margin-left: 4rem;
+}
+
+/* .side-block {
+  width: 12rem;
+  height: 46rem;
+} */
+
+.switch-level {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* .theme-toggle {
+  display: flex;
+  flex-direction: row-reverse;
+} */
+
+/* Dark theme */
+
+.dark button {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark button:hover {
+  background-color: #555;
+}
+
+/* Light theme */
+.light button {
+  border-color: #d2d2d2;
+  color: gray;
+}
+
+.light button:hover {
+  background-color: #e3e3e3;
+}
