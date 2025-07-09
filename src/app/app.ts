@@ -24,19 +24,9 @@ export class App {
   themeLevel: SharedData = inject(SharedData);
   themeButtonData: string = 'wb_sunny';
 
-  // constructor(private sharedData: SharedData) {
-  // }
-
   themeToggle(): void {
-    switch (this.themeLevel.themeData()) {
-      case 'dark':
-        this.themeButtonData = 'wb_sunny';
-        this.themeLevel.setThemeData('light');
-        break;
-      case 'light':
-        this.themeButtonData = 'dark_mode';
-        this.themeLevel.setThemeData('dark');
-        break;
-    }
+    const theme = this.themeLevel.themeData();
+    this.themeButtonData = theme == 'dark' ? 'wb_sunny' : 'dark_mode';
+    this.themeLevel.setThemeData(theme == 'dark' ? 'light' : 'dark');
   }
 }

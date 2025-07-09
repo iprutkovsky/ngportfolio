@@ -8,7 +8,7 @@ import { SharedData } from '../../services/shared-data';
   styleUrl: './hexagon.css'
 })
 export class Hexagon {
-  
-  themeLevel: SharedData = inject(SharedData);  
+
+  themeLevel: SharedData = inject(SharedData);
   @Input() title: string = '';
 }
